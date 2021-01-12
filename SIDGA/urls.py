@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from SIDGA.views import login, administrativa, almacen, compras
+from Almacen import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
-    path('administrativa/', administrativa),
-    path('almacen/', almacen),
-    path('compras/', compras),
+    path('administrativa/', views.administrativa),
+    path('almace/', views.almace),
+    path('compras/', views.compras),
 ]
